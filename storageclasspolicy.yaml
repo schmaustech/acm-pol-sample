@@ -28,7 +28,11 @@ spec:
                 name: localblock
               spec:
                 annotations:
+                  apps.open-cluster-management.io/reconcile-option: merge
                   storageclass.kubernetes.io/is-default-class: "false"
+                provisioner: kubernetes.io/no-provisioner
+                reclaimPolicy: Delete
+                volumeBindingMode: WaitForFirstConsumer
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
