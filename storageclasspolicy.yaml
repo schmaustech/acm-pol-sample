@@ -27,6 +27,9 @@ spec:
               metadata:
                 name: localblock
                 namespace: openshift-local-storage
+              labels:
+                local.storage.openshift.io/owner-name: local-block
+                local.storage.openshift.io/owner-namespace: openshift-local-storage
               spec:
                 annotations:
                   storageclass.kubernetes.io/is-default-class: "false"
