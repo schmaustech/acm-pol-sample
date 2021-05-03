@@ -1,7 +1,7 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: storageclassdefault
+  name: storageclass
   namespace: default
   annotations:
     policy.open-cluster-management.io/standards: NIST-CSF
