@@ -2,7 +2,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
   name: storageclassdefault
-  namespace: openshift-local-storage
+  namespace: default
   annotations:
     policy.open-cluster-management.io/standards: NIST-CSF
     policy.open-cluster-management.io/categories: PR.PT Protective Technology
@@ -15,7 +15,7 @@ spec:
       apiVersion: policy.open-cluster-management.io/v1
       kind: ConfigurationPolicy
       metadata:
-        name: localblock
+        name: policy-replace-cert
       spec:
         remediationAction: inform
         severity: low
@@ -25,11 +25,7 @@ spec:
               apiVersion: storage.k8s.io/v1
               kind: StorageClass
               metadata:
-                name: localblock
-                namespace: openshift-local-storage
-              labels:
-                local.storage.openshift.io/owner-name: local-block
-                local.storage.openshift.io/owner-namespace: openshift-local-storage
+                name: local-block
               spec:
                 annotations:
                   storageclass.kubernetes.io/is-default-class: "false"
