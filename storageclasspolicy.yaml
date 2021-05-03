@@ -17,7 +17,7 @@ spec:
       metadata:
         name: policy-replace-cert
       spec:
-        remediationAction: inform
+        remediationAction: enforce
         severity: low
         object-templates:
           - complianceType: musthave
