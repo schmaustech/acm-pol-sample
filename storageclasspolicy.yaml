@@ -1,8 +1,8 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: storageclass
-  namespace: default
+  name: storageclassdefault
+  namespace: openshift-local-storage
   annotations:
     policy.open-cluster-management.io/standards: NIST-CSF
     policy.open-cluster-management.io/categories: PR.PT Protective Technology
@@ -15,7 +15,7 @@ spec:
       apiVersion: policy.open-cluster-management.io/v1
       kind: ConfigurationPolicy
       metadata:
-        name: policy-replace-cert
+        name: localblock
       spec:
         remediationAction: inform
         severity: low
