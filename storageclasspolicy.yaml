@@ -26,9 +26,8 @@ spec:
               kind: StorageClass
               metadata:
                 name: localblock
-              spec:
-                annotations:
-                  storageclass.kubernetes.io/is-default-class: "false"
+              annotations:
+                storageclass.kubernetes.io/is-default-class: "false"
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
