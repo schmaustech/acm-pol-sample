@@ -30,6 +30,9 @@ spec:
                 annotations:
                   apps.open-cluster-management.io/reconcile-option: merge
                   storageclass.kubernetes.io/is-default-class: "false"
+                labels:
+                  local.storage.openshift.io/owner-name: local-block
+                  local.storage.openshift.io/owner-namespace: openshift-local-storage
                 provisioner: kubernetes.io/no-provisioner
                 reclaimPolicy: Delete
                 volumeBindingMode: WaitForFirstConsumer
