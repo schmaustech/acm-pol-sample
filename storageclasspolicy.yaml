@@ -26,13 +26,18 @@ spec:
               kind: StorageClass
               metadata:
                 name: localblock
-                namespace: openshift-local-storage
-              labels:
-                local.storage.openshift.io/owner-name: local-block
-                local.storage.openshift.io/owner-namespace: openshift-local-storage
               spec:
                 annotations:
                   storageclass.kubernetes.io/is-default-class: "false"
+          - complianceType: musthave
+            objectDefinition:
+              apiVersion: storage.k8s.io/v1
+              kind: StorageClass
+              metadata:
+                name: ocs-storagecluster-ceph-rbd
+              spec:
+                annotations:
+                  storageclass.kubernetes.io/is-default-class: "true"
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
