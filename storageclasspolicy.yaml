@@ -15,7 +15,7 @@ spec:
       apiVersion: policy.open-cluster-management.io/v1
       kind: ConfigurationPolicy
       metadata:
-        name: policy-replace-cert
+        name: policy-storageclass
       spec:
         remediationAction: enforce
         severity: low
