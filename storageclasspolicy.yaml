@@ -26,7 +26,6 @@ spec:
               kind: StorageClass
               metadata:
                 name: localblock
-              spec:
                 annotations:
                   storageclass.kubernetes.io/is-default-class: "false"
           - complianceType: musthave
@@ -35,7 +34,6 @@ spec:
               kind: StorageClass
               metadata:
                 name: ocs-storagecluster-ceph-rbd
-              spec:
                 annotations:
                   storageclass.kubernetes.io/is-default-class: "false"
 ---
